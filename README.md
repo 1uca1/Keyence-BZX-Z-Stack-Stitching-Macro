@@ -1,5 +1,7 @@
 # Keyence-BZX-Z-Stack-Stitching-Macro
 Automates stitching of tiled Z-stack images from Keyence microscopes in Fiji. Prompts for grid size and Z-slices, flattens subfolders, runs stitching per slice, handles padding, and outputs a complete 3D stack. Ideal for batch processing multi-tile, multi-slice datasets.
+
+
 Keyence Z-Stack Stitching Macro SOP 
 
 This SOP outlines how to use the custom ImageJ macro in Fiji to batch-stitch Z-stack images exported from a Keyence BZ-X810 microscope. 
@@ -16,21 +18,7 @@ Configure Macro Parameters
 
 Set Grid Dimensions 
 
-Locate lines 2 and 3 in the macro editor.  
-
-Update the variables gridSizeX and grideSizeY to match the X and Y tile layout used during imaging respectively (e.g., 3x3) 
-
 Set Z-Slice Count 
-
-On line 5, set the value of totalZslices to match the number of Z-slices acquired per stack during imaging.  
-
-Set File Name Prefix 
-
-Scroll to line 44 and locate the line defining the pattern variable. 
-
-Update the filename prefix (e.g., “1x”, “20x”, “40x”) to match the Keyence export naming convention for your dataset.  
-
-Example: If the first slice of your first stack is named 2x_XY01_Z001_CH4.tif, your prefix should be “2x” 
 
 Prepare Output Folder 
 
@@ -76,4 +64,4 @@ Result
 
 Once complete, the macro will combine each stitched z-slice image into a stack, creating a “stitched z-stack."  
 
-The stitched output subfolder will also contain each stitched Z-slice image that will all be uniform in size.  
+The stitched output subfolder will also contain each stitched Z-slice image that will all be uniform in size.   
